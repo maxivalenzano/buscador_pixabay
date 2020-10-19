@@ -23,7 +23,6 @@ function App() {
         
       setImagenes(resultado.hits)
       //calcular el total de paginas
-      console.log(resultado)
       const calcularTotalPaginas = Math.ceil(resultado.totalHits / imagenesPorPaginas);
       setTotalPagina(calcularTotalPaginas);
 
@@ -32,7 +31,7 @@ function App() {
       jumbotron.scrollIntoView({behavior: 'smooth'})
     };
     consultarApi();
-  }, [busqueda. paginaactual]);
+  }, [busqueda, paginaactual]);
 
   //definimos la pagina anteiors
 
